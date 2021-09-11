@@ -1,0 +1,46 @@
+{
+  "name": "cryptic-components",
+  "version": "1.0.0",
+  "description": "React components for the Cryptic Activist platform.",
+  "author": "Davi Silva <davi.cunha.silva.ca@gmail.com>",
+  "source": "./src/index.ts",
+  "main": "./dist/src/index.js",
+  "bin": "./dist/src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "cryptic-components",
+    "react componentst"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cryptic-Activist/cryptic-components"
+  },
+  "homepage": "https://github.com/Cryptic-Activist/cryptic-components/#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "types": "./dist/src/index.d.ts",
+  "scripts": {
+    "test": "cross-env NODE_ENV=development jest",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "refresh": "rm -rf ./node_modules ./yarn.lock ./yarn-error.log && yarn install",
+    "migrate": "yarn sequelize db:migrate"
+  },
+  "husky": {
+    "hooks": {}
+  },
+  "lint-staged": {
+    "*.ts": [
+      "git add ."
+    ]
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.20",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
