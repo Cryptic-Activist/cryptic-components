@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "ES2020",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "commonjs",
+    "lib": ["es6"],
     "allowJs": true,
     "outDir": "./dist",
     "rootDir": ".",
@@ -11,24 +11,13 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
     "experimentalDecorators": true,
+    "jsx": "react",
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "paths": {
-      "@config/*": ["./src/config/*"],
-      "@controllers/*": ["./src/controllers/*"],
-      "@database/*": ["./src/database/*"],
-      "@interfaces/*": ["./src/interfaces/*"],
-      "@middlewares/*": ["./src/middlewares/*"],
-      "@models/*": ["./src/models/*"],
-      "@routes/*": ["./src/routes/*"],
-      "@utils/*": ["./src/utils/*"]
-    }
+    "declaration": true,
+    "baseUrl": "."
   },
-  "include": ["**/*", "__tests__"],
-  "exclude": ["node_modules"]
+  "include": ["**/*", "__tests__"]
 }

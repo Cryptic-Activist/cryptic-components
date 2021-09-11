@@ -1,6 +1,6 @@
 {
   "name": "cryptic-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React components for the Cryptic Activist platform.",
   "author": "Davi Silva <davi.cunha.silva.ca@gmail.com>",
   "source": "./src/index.ts",
