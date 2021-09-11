@@ -1,5 +1,8 @@
 /node_modules
-
 /dist
 
 .env
+*.d.ts
+yarn-error.log
+yarn.lock
+tsconfig.tsbuildinfo

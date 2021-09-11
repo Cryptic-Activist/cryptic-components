@@ -1,11 +1,11 @@
 {
   "name": "cryptic-components",
-  "version": "1.0.1",
+  "version": "1.0.17",
   "description": "React components for the Cryptic Activist platform.",
   "author": "Davi Silva <davi.cunha.silva.ca@gmail.com>",
-  "source": "./src/index.ts",
-  "main": "./dist/src/index.js",
-  "bin": "./dist/src/index.js",
+  "source": "src/index.ts",
+  "main": "./dist/index.js",
+  "bin": "./dist/index.js",
   "license": "MIT",
   "keywords": [
     "cryptic-components",
@@ -19,7 +19,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "types": "./dist/src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "cross-env NODE_ENV=development jest",
     "dev": "nodemon src/index.ts",
@@ -35,6 +35,10 @@
       "git add ."
     ]
   },
+  "files": [
+    "/dist",
+    "package.json"
+  ],
   "devDependencies": {
     "typescript": "^4.4.3"
   },
