@@ -3,6 +3,9 @@
 
 .env
 *.d.ts
+
 yarn-error.log
+
 yarn.lock
+
 tsconfig.tsbuildinfo
