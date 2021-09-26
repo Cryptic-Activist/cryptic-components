@@ -1,34 +1,35 @@
-import { useState } from "react";
+import { useState, FC } from "react";
+// import { IUseArray } from "../../interfaces/hooks";
 
 const useArray = (defaultValue) => {
 	const [array, setArray] = useState(defaultValue);
 
-	function push(element) {
+	const push = (element) => {
 		setArray((a) => [...a, element]);
-	}
+	};
 
-	function filter(callback) {
+	const filter = (callback) => {
 		setArray((a) => a.filter(callback));
-	}
+	};
 
-	function update(index, newElement) {
+	const update = (index, newElement) => {
 		setArray((a) => [
 			...a.slice(0, index),
 			newElement,
 			...a.slice(index + 1, a.length - 1),
 		]);
-	}
+	};
 
-	function remove(index) {
+	const remove = (index) => {
 		setArray((a) => [
 			...a.slice(0, index),
 			...a.slice(index + 1, a.length - 1),
 		]);
-	}
+	};
 
-	function clear() {
+	const clear = () => {
 		setArray([]);
-	}
+	};
 
 	return { array, set: setArray, push, filter, update, remove, clear };
 };

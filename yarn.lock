@@ -522,7 +522,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/hoist-non-react-statics@^3.3.0":
+"@types/hoist-non-react-statics@*", "@types/hoist-non-react-statics@^3.3.0":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
   integrity sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
@@ -582,6 +582,15 @@
   integrity sha512-Da66lEIFeIz9ltsdMZcpQvmrmmoqrfju8pm1BH8WbYjZSwUgCwXLb9C+9XYogwBITnbsSaMdVPb2ekf7TV+03w==
   dependencies:
     "@types/node" "*"
+
+"@types/styled-components@^5.1.14":
+  version "5.1.14"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.14.tgz#e9cf8cdb5eef9d139628183a84c083f630635d67"
+  integrity sha512-d6P1/tyNytqKwam3cQXq7a9uPtovc/mdAs7dBiz1YbDdNIT3X4WmuFU78YdSYh84TXVuhOwezZ3EeKuNBhwsHQ==
+  dependencies:
+    "@types/hoist-non-react-statics" "*"
+    "@types/react" "*"
+    csstype "^3.0.2"
 
 accepts@~1.3.7:
   version "1.3.7"
@@ -1210,10 +1219,10 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-cryptic-redux@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/cryptic-redux/-/cryptic-redux-1.0.4.tgz#a97723268e1ca2730d2c396cb93c8f57f4895236"
-  integrity sha512-iKTPuqV4qZw5fbr2Zxq9f8VuQO9HEaMUJ0152LxLTixVayTYjMT/vhWMtTb2jeSexPrJxbLyNtnkEUmLuQJipg==
+cryptic-redux@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/cryptic-redux/-/cryptic-redux-1.0.8.tgz#4674bf8341dd99727768f3254e8a2cb193c1b900"
+  integrity sha512-T0/v2yW6/Pa2MxiMg0HhgnWyGjTvg3MffE8+kT0NKGCmpsORmGAjpqJWmJwNeSvzIfvTbGgma9PfCrYNMN9J1w==
   dependencies:
     immutability-helper "^3.1.1"
     next "^11.1.2"

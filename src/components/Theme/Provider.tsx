@@ -1,21 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, FC } from "react";
 import { ThemeProvider } from "styled-components";
-import { dis } from "cryptic-redux";
+import { useDispatch } from "react-redux";
 
-const Provider = ({ children }) => {
-	const [theme, setTheme] = useState<"light" | "dark">("light");
+import { IThemeProvider } from "../../interfaces/components/Theme";
+import { themes } from "src/styles";
 
+console.log("themes:", themes);
+
+const Provider: FC<IThemeProvider> = ({
+	children,
+	theme,
+	setLightThemeAction,
+	setDarkThemeAction,
+}) => {
 	const dispatch = useDispatch();
-
-	function toggleTheme(): void {
-		setTheme(theme === "light" ? "dark" : "light");
-
-		if (theme === "dark") {
-			dispatch(setLightMode());
-		} else if (theme === "light") {
-			dispatch(setDarkMode());
-		}
-	}
 
 	useEffect(() => {
 		if (
@@ -25,9 +23,9 @@ const Provider = ({ children }) => {
 			const storagedTheme = localStorage?.getItem("theme");
 
 			if (storagedTheme === "light") {
-				setTheme("light");
+				dispatch(setLightThemeAction());
 			} else if (storagedTheme === "dark") {
-				setTheme("dark");
+				dispatch(setDarkThemeAction());
 			}
 		} else {
 			localStorage?.setItem("theme", theme);
