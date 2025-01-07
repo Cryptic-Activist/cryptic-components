@@ -9,7 +9,7 @@
 	"license": "MIT",
 	"keywords": [
 		"cryptic-components",
-		"react componentst"
+		"react components"
 	],
 	"repository": {
 		"type": "git",
@@ -21,10 +21,11 @@
 	},
 	"types": "./dist/index.d.ts",
 	"scripts": {
-		"test": "cross-env NODE_ENV=development jest",
-		"dev": "nodemon src/index.ts",
-		"build": "tsc",
-		"refresh": "rm -rf ./node_modules ./yarn.lock ./yarn-error.log && yarn install"
+		"dev": "tsup --watch",
+		"start": "node dist/index.js",
+		"build": "tsup",
+		"test": "vitest",
+		"coverage": "vitest run --coverage"
 	},
 	"husky": {
 		"hooks": {}
@@ -39,15 +40,19 @@
 		"package.json"
 	],
 	"devDependencies": {
-		"typescript": "^4.4.3"
+		"@types/react": "^19.0.3",
+		"@typescript-eslint/eslint-plugin": "^8.19.1",
+		"@typescript-eslint/parser": "^8.19.1",
+		"esbuild-sass-plugin": "^3.3.1",
+		"eslint": "^9.17.0",
+		"tsup": "^8.3.5",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.2",
+		"vitest": "^2.1.8"
 	},
-	"dependencies": {
-		"@types/react": "^17.0.20",
-		"@types/styled-components": "^5.1.14",
-		"cryptic-redux": "^1.0.8",
-		"next": "^11.1.2",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"styled-components": "^5.3.1"
+	"peerDependencies": {
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"sass": "^1.83.1"
 	}
 }
